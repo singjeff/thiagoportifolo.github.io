@@ -27,6 +27,18 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
+.botao-acesse {
+  display: grid;
+  background: #e21;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
 .subtitulo {
   font-size: 8rem;
   word-break: break-all;
