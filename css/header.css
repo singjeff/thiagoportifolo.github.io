@@ -16,11 +16,17 @@
 
 .header-menu a {
   font-size: 1.125rem;
+  border-radius: 4px;
   line-height: 1.3;
   padding: 10px 20px;
   text-decoration: none;
   color: hsl(60, 8%, 7%);
   display: block;
+  border: 2px solid #fff;
+}
+
+.header-menu a:hover {
+  border-color: #67dd0a;
 }
 
 @media (max-width: 800px) {
