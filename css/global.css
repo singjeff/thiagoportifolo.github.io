@@ -39,6 +39,9 @@ a {
   border-radius: 30px;
   text-transform: uppercase;
 }
+.botao-acesse:hover {
+  background: rgb(122, 13, 3);
+}
 .subtitulo {
   font-size: 8rem;
   word-break: break-all;
