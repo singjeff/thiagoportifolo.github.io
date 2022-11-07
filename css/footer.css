@@ -186,7 +186,7 @@
 .footer-container-contato
   .footer-contato-formulario
   .inputBox
-  input[type="submit"] {
+  button[type="submit"] {
   width: 100px;
   background: #00bcd4;
   color: #fff;
