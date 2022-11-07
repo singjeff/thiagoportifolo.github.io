@@ -1,33 +1,15 @@
 .footer {
-  background: #000000;
+  background: #111;
 }
 
-.footer-container {
+.footer-conteudo {
   max-width: 1200px;
-  padding: 120px 20px 60px 20px;
+  padding: 120px 20px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 100px;
-  align-items: center;
-}
-
-.footer-texto {
-  font-size: 1.5rem;
-  line-height: 1.33;
-  color: #cccccc;
-}
-
-.footer-contato li {
-  font-weight: bold;
-  font-size: 2.25rem;
-  line-height: 1.1;
-  color: #ffffff;
-  margin-bottom: 30px;
-}
-
-.footer-contato li a {
-  color: #ffffff;
+  position: relative;
 }
 
 .footer-copy {
@@ -37,13 +19,209 @@
   text-align: center;
 }
 
-@media (max-width: 800px) {
-  .footer-container {
+.footer-conteudo .footer-container {
+  max-width: 800px;
+}
+
+.footer-conteudo .footer-container h2 {
+  font-size: 2.5em;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+.footer-conteudo .footer-container p {
+  color: #fff;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 300;
+}
+
+.footer-container-contato {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.footer-container-contato .footer-contato-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container-contato .footer-contato-info .footer-caixa {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  cursor: pointer;
+}
+
+.footer-container-contato .footer-contato-info .footer-caixa .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75em;
+  transition: 0.5;
+  border-radius: 20px;
+}
+
+.footer-contato {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin: 30px 0px;
+  justify-content: center;
+  padding: 0px 0px 0px 40px;
+}
+
+.footer-contato li a {
+  color: #fff;
+  font-size: 2em;
+}
+
+.footer-contato li a:hover {
+  color: #63da08a4;
+}
+
+.footer-container-contato .footer-contato-info .footer-caixa:hover .icon {
+  background: #63da08a4;
+  color: #fff;
+}
+
+.footer-container-contato .footer-contato-info .footer-caixa .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.footer-container-contato .footer-contato-info .footer-caixa .text h3 {
+  font-weight: 500;
+  color: #63da08a4;
+}
+
+.footer-container-contato .footer-contato-info .footer-texto-h2 {
+  color: #fff;
+  margin-top: 50px;
+  font-weight: 500;
+  border-left: 50px solid #63da08a4;
+  line-height: 0.3em;
+}
+
+.footer-container-contato .footer-contato-formulario {
+  position: relative;
+  width: 40%;
+  background: #fff;
+  min-height: 100px;
+  padding: 60px;
+}
+
+.footer-container-contato .footer-contato-formulario h2 {
+  font-size: 2em;
+  color: #333;
+  font-weight: 500;
+}
+
+.footer-container-contato .footer-contato-formulario .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 23px;
+}
+.footer-container-contato .footer-contato-formulario .inputBox input,
+.footer-container-contato .footer-contato-formulario .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 1.1em;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.footer-container-contato .footer-contato-formulario span {
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  padding: 5px 0;
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #666;
+  transition: 0.5s;
+}
+
+.footer-container-contato
+  .footer-contato-formulario
+  .inputBox
+  input:focus
+  ~ span,
+.footer-container-contato
+  .footer-contato-formulario
+  .inputBox
+  textarea:focus
+  ~ span,
+.footer-container-contato
+  .footer-contato-formulario
+  .inputBox
+  input:valid
+  ~ span,
+.footer-container-contato
+  .footer-contato-formulario
+  .inputBox
+  textarea:valid
+  ~ span {
+  color: #357404;
+  font-size: 0.9em;
+  transform: translateY(-20px);
+}
+
+.footer-container-contato
+  .footer-contato-formulario
+  .inputBox
+  input[type="submit"] {
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+@media (max-width: 971px) {
+  .footer-conteudo {
     grid-template-columns: 1fr;
+    padding: 50px;
     gap: 40px;
   }
+  .footer-conteudo .subtitulo {
+    display: none;
+  }
 
-  .footer-contato li {
-    font-size: 1.5rem;
+  .footer-container-contato {
+    flex-direction: column;
+  }
+
+  .footer-container-contato .footer-contato-info,
+  .footer-container-contato .footer-contato-formulario {
+    width: 100%;
+  }
+
+  .footer-container-contato .footer-contato-formulario {
+    padding: 50px 30px;
+    width: 57%;
+  }
+
+  .footer-container-contato .footer-contato-formulario span {
+    font-size: 1em;
   }
 }
